@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred: hsl(14, 88%, 65%);
+    --Softviolet: hsl(273, 75%, 66%);
+    --blue: hsl(240, 73%, 65%);
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+    --Lightgrayishblue: hsl(240, 5%, 91%);
+    --withe: #fff;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+}
+
+.main-container {
+    background-color: var(--withe);
+    width: 330px;
+    min-height: 536px;
+    margin: 147px auto 30px;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 40px var(--Verydarkdesaturatedblue);
+}
+
+.main-container__s1__image {
+    display: block;
+    width: 240px;
+    margin: -130px auto 0;
+}
+
+.main-container__s1__image--shadow {
+    width: 240px;
+    margin: -75px auto 0;
+    content: url(./images/bg-pattern-mobile.svg);
+}
+
+.main-container__s2__tittle {
+    margin: 24px 0 30px;
+    font-size: 2.6em;
+    text-align: center;
+}
+
+.main-container__s2__details {
+    margin: 16px 0;
+    font-size: 1.05em;
+    position: relative;
+}
+
+.main-container__s2__details[open] {
+    font-weight: 700;
+}
+
+.main-container__s2__details[open] .main-container__s2__details__icon {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.main-container__s2__details__summary {
+    list-style: none;
+}
+
+.main-container__s2__details__summary:hover {
+    cursor: pointer;
+    color: var(--Softred);
+}
+
+.main-container__s2__details__p {
+    color: var(--Darkgrayishblue);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.main-container__s2__details__icon {
+    position: absolute;
+    right: 5px;
+    transition: 300ms;
+}
+
+.main-container__s2__line {
+    border-color: transparent;
+    border-bottom-color: var(--Lightgrayishblue);
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*-----------------------------------desktop-------------------------------------------*/
+
+@media (min-width: 1044px) {
+    .main-container {
+        width: 924px;
+        display: flex;
+        background-image: url('./images/bg-pattern-desktop.svg');
+        background-position-x: -536px;
+        background-position-y: -281px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .main-container__s1,
+    .main-container__s2 {
+        width: 100%;
+    }
+
+    .main-container__s1__image {
+        width: 474px;
+        margin: 67px 0 0 -130px;
+    }
+
+    .main-container__s1__image--shadow {
+        content: '';
+    }
+
+    .main-container__s2 {
+        padding: 15px 80px 20px 40px;
+    }
+
+    .main-container__s2__tittle {
+        text-align: left;
+        margin-bottom: 32px;
+    }
+
+    .main-container__s2__details {
+        margin: 26px 0;
+    }
+
+}
